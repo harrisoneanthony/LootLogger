@@ -31,6 +31,9 @@
                                             </constraints>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                                            <connections>
+                                                <action selector="addNewItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NGn-48-QSu"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qth-bH-1qz">
                                             <rect key="frame" x="8" y="15" width="184.66666666666666" height="30"/>
@@ -40,6 +43,9 @@
                                             </constraints>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="filled" title="Edit"/>
+                                            <connections>
+                                                <action selector="toggleEditingMode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ieo-bk-uBm"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
