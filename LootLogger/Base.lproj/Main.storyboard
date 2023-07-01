@@ -19,9 +19,42 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jkc-09-Mgg">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="Rrh-91-KnA">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJV-to-2AV">
+                                            <rect key="frame" x="200.66666666666663" y="15" width="184.33333333333337" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="OXm-bj-9qr"/>
+                                                <constraint firstAttribute="height" constant="30" id="nfA-2t-PnF"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qth-bH-1qz">
+                                            <rect key="frame" x="8" y="15" width="184.66666666666666" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="CKp-e1-42S"/>
+                                                <constraint firstAttribute="height" constant="30" id="f2b-oz-YwZ"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="filled" title="Edit"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="qth-bH-1qz" firstAttribute="leading" secondItem="Rrh-91-KnA" secondAttribute="leading" constant="8" id="AZ7-UM-zIU"/>
+                                        <constraint firstItem="iJV-to-2AV" firstAttribute="width" secondItem="qth-bH-1qz" secondAttribute="width" id="RRQ-Mb-KHQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="iJV-to-2AV" secondAttribute="trailing" constant="8" id="Uek-gr-l2C"/>
+                                        <constraint firstItem="iJV-to-2AV" firstAttribute="centerY" secondItem="Rrh-91-KnA" secondAttribute="centerY" id="bZ2-aQ-ZWF"/>
+                                        <constraint firstItem="qth-bH-1qz" firstAttribute="centerY" secondItem="Rrh-91-KnA" secondAttribute="centerY" id="oYo-42-I93"/>
+                                        <constraint firstItem="iJV-to-2AV" firstAttribute="leading" secondItem="qth-bH-1qz" secondAttribute="trailing" constant="8" id="ra7-hh-gWd"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UITableViewCell" textLabel="bzD-KG-XGg" detailTextLabel="PCm-3V-q9P" style="IBUITableViewCellStyleValue1" id="8oY-7x-Eak">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="110" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8oY-7x-Eak" id="ruF-cn-qmT">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
@@ -62,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="5"/>
+            <point key="canvasLocation" x="101.5267175572519" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>

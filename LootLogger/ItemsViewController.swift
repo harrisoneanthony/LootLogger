@@ -11,7 +11,15 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     @IBOutlet weak var tableView: UITableView!
-    var values = ["Harrison", "Steve", "Maddy"]
+    
+    @IBAction func addNewItem(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func toggleEditingMode(_ sender: UIButton) {
+        
+    }
+    
     var itemStore: ItemStore!
     
     override func viewDidLoad() {
