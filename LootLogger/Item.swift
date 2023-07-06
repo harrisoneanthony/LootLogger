@@ -34,7 +34,7 @@ class Item: Equatable {
             
             self.init(name: randomName, serialNumber: randomSerialNumber, valueInDollars: randomValue)
         } else {
-            self.init(name: "", serialNumber: nil, valueInDollars: 0)
+            self.init(name: "No items", serialNumber: nil, valueInDollars: 0)
         }
     }
     
