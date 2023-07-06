@@ -8,8 +8,8 @@
 import Foundation
 
 extension String {
-    func isNotEmpty(){
-        print(!self.isEmpty)
+    func isNotEmpty() -> Bool {
+        return !self.isEmpty
     }
     
     var isEqualABC: Bool {

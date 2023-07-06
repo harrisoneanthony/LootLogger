@@ -70,13 +70,21 @@
 				84A728DC2A561A0500B70013 /* ItemsViewControllerTableDelegate.swift */,
 				84A728D82A4B948D00B70013 /* Item.swift */,
 				84A728DA2A4B9AD900B70013 /* ItemStore.swift */,
-				84A728DE2A561B8300B70013 /* String.swift */,
+				84A728E02A561FD400B70013 /* Extensions */,
 				84A728CA2A4B8E8D00B70013 /* Main.storyboard */,
 				84A728CD2A4B8E9000B70013 /* Assets.xcassets */,
 				84A728CF2A4B8E9000B70013 /* LaunchScreen.storyboard */,
 				84A728D22A4B8E9000B70013 /* Info.plist */,
 			);
 			path = LootLogger;
+			sourceTree = "<group>";
+		};
+		84A728E02A561FD400B70013 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84A728DE2A561B8300B70013 /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

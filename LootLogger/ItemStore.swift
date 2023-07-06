@@ -8,19 +8,18 @@
 import UIKit
 
 class ItemStore {
-    var allItems = [Item]()
+    var allItems = [[Item](), [Item]()]
     
     @discardableResult func createItem() -> Item {
         let newItem = Item(random: true)
-        
-        allItems.append(newItem)
-        
+        newItem.valueInDollars <= 50 ? allItems[0].append(newItem) : allItems[1].append(newItem)
         return newItem
     }
     
     func removeItem(_ item: Item) {
-        if let index = allItems.firstIndex(of: item) {
-            allItems.remove(at: index)
+        let section = item.valueInDollars <= 50 ? 0 : 1
+        if let index = allItems[section].firstIndex(of: item) {
+            allItems[section].remove(at: index)
         }
     }
     
