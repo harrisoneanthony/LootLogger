@@ -15,8 +15,8 @@
 		84A728D12A4B8E9000B70013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A728CF2A4B8E9000B70013 /* LaunchScreen.storyboard */; };
 		84A728D92A4B948D00B70013 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A728D82A4B948D00B70013 /* Item.swift */; };
 		84A728DB2A4B9AD900B70013 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A728DA2A4B9AD900B70013 /* ItemStore.swift */; };
-		84A728DD2A561A0500B70013 /* ItemsViewControllerTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A728DC2A561A0500B70013 /* ItemsViewControllerTableDelegate.swift */; };
 		84A728DF2A561B8300B70013 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A728DE2A561B8300B70013 /* String.swift */; };
+		84A728E32A5794B800B70013 /* ItemsViewControllerTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A728E22A5794B800B70013 /* ItemsViewControllerTableDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		84A728D22A4B8E9000B70013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A728D82A4B948D00B70013 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		84A728DA2A4B9AD900B70013 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
-		84A728DC2A561A0500B70013 /* ItemsViewControllerTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerTableDelegate.swift; sourceTree = "<group>"; };
 		84A728DE2A561B8300B70013 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		84A728E22A5794B800B70013 /* ItemsViewControllerTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerTableDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +67,8 @@
 				84A728C42A4B8E8D00B70013 /* AppDelegate.swift */,
 				84A728C62A4B8E8D00B70013 /* SceneDelegate.swift */,
 				84A728C82A4B8E8D00B70013 /* ItemsViewController.swift */,
-				84A728DC2A561A0500B70013 /* ItemsViewControllerTableDelegate.swift */,
 				84A728D82A4B948D00B70013 /* Item.swift */,
+				84A728E22A5794B800B70013 /* ItemsViewControllerTableDelegate.swift */,
 				84A728DA2A4B9AD900B70013 /* ItemStore.swift */,
 				84A728DE2A561B8300B70013 /* String.swift */,
 				84A728CA2A4B8E8D00B70013 /* Main.storyboard */,
@@ -152,11 +152,11 @@
 			files = (
 				84A728D92A4B948D00B70013 /* Item.swift in Sources */,
 				84A728C92A4B8E8D00B70013 /* ItemsViewController.swift in Sources */,
+				84A728E32A5794B800B70013 /* ItemsViewControllerTableDelegate.swift in Sources */,
 				84A728C52A4B8E8D00B70013 /* AppDelegate.swift in Sources */,
 				84A728DB2A4B9AD900B70013 /* ItemStore.swift in Sources */,
 				84A728DF2A561B8300B70013 /* String.swift in Sources */,
 				84A728C72A4B8E8D00B70013 /* SceneDelegate.swift in Sources */,
-				84A728DD2A561A0500B70013 /* ItemsViewControllerTableDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
