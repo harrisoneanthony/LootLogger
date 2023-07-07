@@ -20,6 +20,14 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func addNewItem(_ sender: UIButton) {
+        if itemStore.allItems.count == 1,
+           itemStore.allItems[0].name == "No items!",
+           itemStore.allItems[0].serialNumber == nil,
+           itemStore.allItems[0].valueInDollars == 0 {
+            itemStore.allItems.remove(at: 0)
+            tableView.deleteRows(at: [IndexPath(row: 0, section: 0)], with:. automatic)
+        }
+        
         // Create a new item and add it to the store
         let newItem = itemStore.createItem()
         
