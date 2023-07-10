@@ -12,12 +12,14 @@ class Item: Equatable {
     var valueInDollars: Int
     var serialNumber: String?
     let dateCreated: Date
+    var isFavorite = false
     
-    init(name: String, serialNumber: String?, valueInDollars: Int){
+    init(name: String, serialNumber: String?, valueInDollars: Int, isFavorite: Bool){
         self.name = name
         self.valueInDollars = valueInDollars
         self.serialNumber = serialNumber
         self.dateCreated = Date()
+        self.isFavorite = isFavorite
     }
     
     convenience init(random: Bool = false) {
@@ -32,9 +34,9 @@ class Item: Equatable {
             let randomValue = Int.random(in: 0..<100)
             let randomSerialNumber = UUID().uuidString.components(separatedBy: "-").first!
             
-            self.init(name: randomName, serialNumber: randomSerialNumber, valueInDollars: randomValue)
+            self.init(name: randomName, serialNumber: randomSerialNumber, valueInDollars: randomValue, isFavorite: false)
         } else {
-            self.init(name: "", serialNumber: nil, valueInDollars: 0)
+            self.init(name: "", serialNumber: nil, valueInDollars: 0, isFavorite: false)
         }
     }
     
@@ -43,5 +45,6 @@ class Item: Equatable {
         && lhs.serialNumber == rhs.serialNumber
         && lhs.valueInDollars == rhs.valueInDollars
         && lhs.dateCreated == rhs.dateCreated
+        && lhs.isFavorite == rhs.isFavorite
     }
 }

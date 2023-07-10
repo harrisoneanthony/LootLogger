@@ -51,6 +51,11 @@ extension ItemsViewController {
         // update the model
         itemStore.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
     }
+    
+    // swiping function for favoriting items
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        <#code#>
+    }
 
 }
 
