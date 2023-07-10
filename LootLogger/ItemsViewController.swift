@@ -19,13 +19,11 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         print("ABC".isEqualABC)
     }
     
+    
     @IBAction func addNewItem(_ sender: UIButton) {
-        if itemStore.allItems.count == 1,
-           itemStore.allItems[0].name == "No items!",
-           itemStore.allItems[0].serialNumber == nil,
-           itemStore.allItems[0].valueInDollars == 0 {
-            itemStore.allItems.remove(at: 0)
-            tableView.deleteRows(at: [IndexPath(row: 0, section: 0)], with:. automatic)
+        if itemStore.allItems.contains(where: { $0.name == "No items" && $0.serialNumber == nil && $0.valueInDollars == 0 }) {
+            itemStore.allItems.removeAll { $0.name == "No items" && $0.serialNumber == nil && $0.valueInDollars == 0 }
+            tableView.reloadData()
         }
         
         // Create a new item and add it to the store
@@ -36,9 +34,10 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let indexPath = IndexPath(row: index, section: 0)
             
             //Insert this new row into the table
-            tableView.insertRows(at:[indexPath], with: .automatic)
+            tableView.insertRows(at: [indexPath], with: .automatic)
         }
     }
+
     
     @IBAction func toggleEditingMode(_ sender: UIButton) {
         // if you are currently in editing mode...
