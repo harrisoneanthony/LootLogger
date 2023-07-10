@@ -59,29 +59,46 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="5" indentationWidth="4" reuseIdentifier="UITableViewCell" textLabel="mSP-I8-IuE" detailTextLabel="AG8-a3-HKg" style="IBUITableViewCellStyleValue1" id="8oY-7x-Eak">
-                                        <rect key="frame" x="0.0" y="110" width="393" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="5" indentationWidth="4" reuseIdentifier="ItemCell" rowHeight="65" id="8oY-7x-Eak" customClass="ItemCell" customModule="LootLogger" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="110" width="393" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8oY-7x-Eak" id="ruF-cn-qmT">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mSP-I8-IuE">
-                                                    <rect key="frame" x="40" y="15" width="25" height="14.333333333333334"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1t-2I-RtV">
+                                                    <rect key="frame" x="38" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AG8-a3-HKg">
-                                                    <rect key="frame" x="340.33333333333331" y="15" width="32.666666666666664" height="14.333333333333334"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IW9-O5-7wf">
+                                                    <rect key="frame" x="38" y="40" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tue-2g-p0e">
+                                                    <rect key="frame" x="316" y="22" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="IW9-O5-7wf" secondAttribute="bottom" constant="4" id="BBz-Kh-OCx"/>
+                                                <constraint firstItem="IW9-O5-7wf" firstAttribute="leading" secondItem="z1t-2I-RtV" secondAttribute="leading" id="I1A-kA-U9S"/>
+                                                <constraint firstItem="tue-2g-p0e" firstAttribute="centerY" secondItem="ruF-cn-qmT" secondAttribute="centerY" id="L2o-4Y-sF1"/>
+                                                <constraint firstItem="z1t-2I-RtV" firstAttribute="top" secondItem="ruF-cn-qmT" secondAttribute="topMargin" id="RiH-ne-ZvC"/>
+                                                <constraint firstItem="z1t-2I-RtV" firstAttribute="leading" secondItem="ruF-cn-qmT" secondAttribute="leadingMargin" constant="18" id="hFW-in-QP2"/>
+                                                <constraint firstAttribute="trailing" secondItem="tue-2g-p0e" secondAttribute="trailing" constant="35" id="mtA-Cr-tCQ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="z1t-2I-RtV" id="eOG-s8-TnO"/>
+                                            <outlet property="serialNumberLabel" destination="IW9-O5-7wf" id="RKy-wi-Ibp"/>
+                                            <outlet property="valueLabel" destination="tue-2g-p0e" id="U3t-lI-ZuY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

@@ -15,6 +15,9 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTable()
+        
+        tableView.rowHeight = 65
+        
         print("".isNotEmpty())
         print("ABC".isEqualABC)
     }
