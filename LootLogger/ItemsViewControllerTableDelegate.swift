@@ -27,7 +27,15 @@ extension ItemsViewController {
         // configure the cell with the Item
         cell.nameLabel.text = item.name
         cell.serialNumberLabel.text = item.serialNumber
-        cell.valueLabel.text = "\(item.valueInDollars)"
+        cell.valueLabel.text = "$\(item.valueInDollars)"
+        
+        // Customize the text color based on the value in dollars
+        switch item.valueInDollars {
+        case let value where value < 50:
+            cell.valueLabel.textColor = .green
+        default:
+            cell.valueLabel.textColor = .red
+        }
         
         return cell
     }

@@ -16,7 +16,8 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         setUpTable()
         
-        tableView.rowHeight = 65
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 70
         
         print("".isNotEmpty())
         print("ABC".isEqualABC)
