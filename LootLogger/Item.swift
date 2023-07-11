@@ -14,7 +14,13 @@ class Item: Equatable {
     let dateCreated: Date
     
     init(name: String, serialNumber: String?, valueInDollars: Int){
-        self.name = name
+        // SILVER CHALLENGE: CHAPTER 10
+        if name.count > 20 { // Adjust the character limit as needed
+                let truncatedName = String(name.prefix(20)) + "..." // Truncate the name and add ellipsis
+                self.name = truncatedName
+        } else {
+            self.name = name
+        }
         self.valueInDollars = valueInDollars
         self.serialNumber = serialNumber
         self.dateCreated = Date()

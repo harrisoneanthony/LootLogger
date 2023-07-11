@@ -29,6 +29,7 @@ extension ItemsViewController {
         cell.serialNumberLabel.text = item.serialNumber
         cell.valueLabel.text = "$\(item.valueInDollars)"
         
+        // BRONZE CHALLENGE: CHAPTER 10
         // Customize the text color based on the value in dollars
         switch item.valueInDollars {
         case let value where value < 50:
