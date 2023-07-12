@@ -204,8 +204,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="911-2P-qNB"/>
                     <connections>
+                        <outlet property="dateLabel" destination="h60-Wl-gmp" id="zlZ-02-9Zg"/>
                         <outlet property="nameField" destination="Aa2-cK-Cfj" id="JQA-Hv-PZY"/>
-                        <outlet property="serialField" destination="2eZ-7U-gw1" id="DQE-th-vTf"/>
+                        <outlet property="serialNumberField" destination="2eZ-7U-gw1" id="Cnc-9w-oFe"/>
                         <outlet property="valueField" destination="EZJ-OZ-uyB" id="1eg-Vy-nIc"/>
                     </connections>
                 </viewController>
