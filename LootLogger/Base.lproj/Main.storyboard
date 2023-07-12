@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="101.5267175572519" y="4.9295774647887329"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="4kT-yy-vML">
             <objects>
-                <viewController id="61s-nt-Ot8" sceneMemberID="viewController">
+                <viewController id="61s-nt-Ot8" customClass="DetailViewController" customModule="LootLogger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FRq-18-6AN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,6 +203,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="911-2P-qNB"/>
+                    <connections>
+                        <outlet property="nameField" destination="Aa2-cK-Cfj" id="JQA-Hv-PZY"/>
+                        <outlet property="serialField" destination="2eZ-7U-gw1" id="DQE-th-vTf"/>
+                        <outlet property="valueField" destination="EZJ-OZ-uyB" id="1eg-Vy-nIc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFM-3R-fdq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
