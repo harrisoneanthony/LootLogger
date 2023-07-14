@@ -8,15 +8,20 @@
 import UIKit
 
 class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    @IBOutlet weak var tableView: UITableView!
     var itemStore: ItemStore!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var favoriteSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTable()
         print("".isNotEmpty())
         print("ABC".isEqualABC)
+        favoriteSwitch.isOn = false
+    }
+    
+    @IBAction func favoriteSwitch(_ sender: UISwitch) {
+        tableView.reloadData()
     }
     
     @IBAction func addNewItem(_ sender: UIButton) {
@@ -26,7 +31,10 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Figure out where that item is in the array
         if let index = itemStore.allItems.firstIndex(of: newItem) {
             let indexPath = IndexPath(row: index, section: 0)
-            
+            if favoriteSwitch.isOn {
+                newItem.isFavorite = true
+                newItem.name += "⭐"
+            }
             //Insert this new row into the table
             tableView.insertRows(at:[indexPath], with: .automatic)
         }

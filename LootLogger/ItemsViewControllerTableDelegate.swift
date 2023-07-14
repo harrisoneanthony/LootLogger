@@ -54,8 +54,27 @@ extension ItemsViewController {
     
     // swiping function for favoriting items
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        <#code#>
+        let action = UIContextualAction(style: .normal, title: "⭐", handler: { action, view, completion in
+            let item = self.itemStore.allItems[indexPath.row]
+            switch item.isFavorite {
+            case true:
+                item.isFavorite = false
+                item.name = item.name.trimmingCharacters(in: ["⭐"])
+            case false:
+                item.isFavorite = true
+                item.name += "⭐"
+            }
+            self.tableView.reloadRows(at: [indexPath], with: .automatic)
+        })
+        return UISwipeActionsConfiguration(actions: [action])
     }
-
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if favoriteSwitch.isOn,
+           !itemStore.allItems[indexPath.row].isFavorite {
+            return 0
+        }
+        return tableView.rowHeight
+    }
 }
 
