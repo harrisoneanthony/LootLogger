@@ -98,7 +98,7 @@
                                             <outlet property="nameLabel" destination="z1t-2I-RtV" id="eOG-s8-TnO"/>
                                             <outlet property="serialNumberLabel" destination="IW9-O5-7wf" id="RKy-wi-Ibp"/>
                                             <outlet property="valueLabel" destination="tue-2g-p0e" id="U3t-lI-ZuY"/>
-                                            <segue destination="61s-nt-Ot8" kind="show" id="ZqH-UH-7BC"/>
+                                            <segue destination="61s-nt-Ot8" kind="show" identifier="showItem" id="ZqH-UH-7BC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
