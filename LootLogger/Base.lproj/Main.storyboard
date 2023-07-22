@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VyJ-T7-7GH">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jkc-09-Mgg">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="ceh-Ob-ZHq">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
@@ -98,7 +98,7 @@
                                             <outlet property="nameLabel" destination="z1t-2I-RtV" id="eOG-s8-TnO"/>
                                             <outlet property="serialNumberLabel" destination="IW9-O5-7wf" id="RKy-wi-Ibp"/>
                                             <outlet property="valueLabel" destination="tue-2g-p0e" id="U3t-lI-ZuY"/>
-                                            <segue destination="61s-nt-Ot8" kind="show" identifier="showItem" id="ZqH-UH-7BC"/>
+                                            <segue destination="61s-nt-Ot8" kind="show" identifier="showItem" id="xVW-Eb-pqM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -113,24 +113,25 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jkc-09-Mgg" secondAttribute="bottom" id="vAq-5I-IX0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8ts-Hv-yIT"/>
                     <connections>
                         <outlet property="tableView" destination="jkc-09-Mgg" id="XjI-pD-Bts"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.5267175572519" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="3467.9389312977096" y="-6.3380281690140849"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="4kT-yy-vML">
             <objects>
                 <viewController id="61s-nt-Ot8" customClass="DetailViewController" customModule="LootLogger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FRq-18-6AN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dFP-Nj-Om0">
-                                <rect key="frame" x="0.0" y="20" width="393" height="802"/>
+                                <rect key="frame" x="8" y="123" width="393" height="675"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Rv-ts-Tdf">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
@@ -181,25 +182,28 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h60-Wl-gmp">
-                                        <rect key="frame" x="0.0" y="102" width="393" height="700"/>
+                                        <rect key="frame" x="0.0" y="102" width="393" height="573"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6Rv-ts-Tdf" secondAttribute="trailing" id="5xA-r3-e72"/>
+                                    <constraint firstItem="6Rv-ts-Tdf" firstAttribute="top" secondItem="dFP-Nj-Om0" secondAttribute="top" id="KRZ-2W-yUo"/>
                                     <constraint firstItem="Aa2-cK-Cfj" firstAttribute="leading" secondItem="2eZ-7U-gw1" secondAttribute="leading" id="hDO-VF-oMO"/>
                                     <constraint firstItem="2eZ-7U-gw1" firstAttribute="leading" secondItem="EZJ-OZ-uyB" secondAttribute="leading" id="vFM-8g-QdV"/>
+                                    <constraint firstItem="6Rv-ts-Tdf" firstAttribute="leading" secondItem="dFP-Nj-Om0" secondAttribute="leading" id="xOQ-uk-Kch"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FGi-uZ-MNE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dFP-Nj-Om0" firstAttribute="leading" secondItem="FGi-uZ-MNE" secondAttribute="leading" id="Co6-lp-QFa"/>
                             <constraint firstItem="dFP-Nj-Om0" firstAttribute="top" secondItem="FGi-uZ-MNE" secondAttribute="top" constant="20" id="MI3-xk-fdt"/>
                             <constraint firstItem="FGi-uZ-MNE" firstAttribute="bottom" secondItem="dFP-Nj-Om0" secondAttribute="bottom" constant="20" id="W5L-NL-egL"/>
-                            <constraint firstItem="FGi-uZ-MNE" firstAttribute="trailing" secondItem="dFP-Nj-Om0" secondAttribute="trailing" id="a47-oU-Jtp"/>
+                            <constraint firstItem="dFP-Nj-Om0" firstAttribute="leading" secondItem="FGi-uZ-MNE" secondAttribute="leading" constant="8" id="dg9-nB-xK6"/>
+                            <constraint firstItem="dFP-Nj-Om0" firstAttribute="trailing" secondItem="FGi-uZ-MNE" secondAttribute="trailing" constant="8" id="mCH-CV-CWS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="911-2P-qNB"/>
@@ -212,7 +216,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFM-3R-fdq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="884.73282442748086" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="4591.6030534351139" y="4.9295774647887329"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0S4-Dm-9WS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VyJ-T7-7GH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pDA-ln-1cc">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HZ4-nN-aK3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y43-0v-B7j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2541.2213740458014" y="-6.3380281690140849"/>
         </scene>
     </scenes>
     <resources>
