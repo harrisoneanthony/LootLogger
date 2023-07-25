@@ -10,6 +10,7 @@ import UIKit
 class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    
     var itemStore: ItemStore!
     
     override func viewDidLoad() {
@@ -19,11 +20,11 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 70
         
-        print("".isNotEmpty())
-        print("ABC".isEqualABC)
+//        print("".isNotEmpty())
+//        print("ABC".isEqualABC)
     }
     
-    @IBAction func addNewItem(_ sender: UIButton) {
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         // Create a new item and add it to the store
         let newItem = itemStore.createItem()
         
@@ -36,22 +37,22 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    @IBAction func toggleEditingMode(_ sender: UIButton) {
-        // if you are currently in editing mode...
-        if tableView.isEditing {
-            // Change text of button to inform user of state
-            sender.setTitle("Edit", for: .normal)
-            
-            // turn off editing mode
-            tableView.setEditing(false, animated: true)
-        } else {
-            // Change text of button to inform user of state
-            sender.setTitle("Done", for: .normal)
-            
-            // Enter editing mode
-            tableView.setEditing(true, animated: true)
-        }
-    }
+//    @IBAction func toggleEditingMode(_ sender: UIButton) {
+//        // if you are currently in editing mode...
+//        if tableView.isEditing {
+//            // Change text of button to inform user of state
+//            sender.setTitle("Edit", for: .normal)
+//
+//            // turn off editing mode
+//            tableView.setEditing(false, animated: true)
+//        } else {
+//            // Change text of button to inform user of state
+//            sender.setTitle("Done", for: .normal)
+//
+//            // Enter editing mode
+//            tableView.setEditing(true, animated: true)
+//        }
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // if the triggered segue is the "showItem" segue
@@ -71,8 +72,21 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         tableView.reloadData()
+    }
+    
+    required init?(coder aDecoder: NSCoder){
+        super.init(coder: aDecoder)
+        
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        // Takes care of toggling the button's title.
+        super.setEditing(editing, animated: true)
+
+        // Toggle table view editing.
+        tableView.setEditing(editing, animated: true)
     }
 }
 
