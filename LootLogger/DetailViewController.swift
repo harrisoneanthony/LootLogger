@@ -13,6 +13,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var serialNumberField: UITextField!
     @IBOutlet var valueField: UITextField!
     @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -26,13 +27,17 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         alertController.modalPresentationStyle = .popover
         alertController.popoverPresentationController?.barButtonItem = sender
         
-        let cameraAction = UIAlertAction(title: "Camera", style: .default){ _ in
-            print("Present camera")
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let cameraAction = UIAlertAction(title: "Camera", style: .default){ _ in
+                // print("Present camera")
+                let imagePicker = self.imagePicker(for: .camera)
+            }
+            alertController.addAction(cameraAction)
         }
-        alertController.addAction(cameraAction)
         
         let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { _ in
-            print("Present photo library")
+            // print("Present photo library")
+            let imagePicker = self.imagePicker(for: .photoLibrary)
         }
         alertController.addAction(photoLibraryAction)
         
@@ -94,4 +99,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
+    func imagePicker(for sourceType: UIImagePickerController.SourceType) -> UIImagePickerController {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = sourceType
+        return imagePicker
+    }
+    
 }

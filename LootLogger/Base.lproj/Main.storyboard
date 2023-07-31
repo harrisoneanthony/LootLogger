@@ -167,11 +167,14 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h60-Wl-gmp">
-                                        <rect key="frame" x="0.0" y="102" width="375" height="536"/>
+                                        <rect key="frame" x="0.0" y="102" width="375" height="66"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="248" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="7z6-Yt-Czf">
+                                        <rect key="frame" x="0.0" y="168" width="375" height="470"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="6Rv-ts-Tdf" firstAttribute="top" secondItem="dFP-Nj-Om0" secondAttribute="top" id="KRZ-2W-yUo"/>
@@ -218,6 +221,7 @@
                     <navigationItem key="navigationItem" id="911-2P-qNB"/>
                     <connections>
                         <outlet property="dateLabel" destination="h60-Wl-gmp" id="zlZ-02-9Zg"/>
+                        <outlet property="imageView" destination="7z6-Yt-Czf" id="9i3-Bw-Y8s"/>
                         <outlet property="nameField" destination="Aa2-cK-Cfj" id="JQA-Hv-PZY"/>
                         <outlet property="serialNumberField" destination="2eZ-7U-gw1" id="Cnc-9w-oFe"/>
                         <outlet property="valueField" destination="EZJ-OZ-uyB" id="1eg-Vy-nIc"/>
@@ -230,7 +234,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4591.6030534351139" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="4590.0763358778622" y="4.9295774647887329"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0S4-Dm-9WS">
