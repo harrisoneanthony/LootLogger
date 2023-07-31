@@ -45,24 +45,21 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tue-2g-p0e">
-                                                    <rect key="frame" x="316" y="22" width="42" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="g48-OG-aFW"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tue-2g-p0e">
+                                                    <rect key="frame" x="316.66666666666669" y="22" width="41.333333333333314" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="tue-2g-p0e" secondAttribute="trailing" constant="15" id="01x-vF-xPm"/>
                                                 <constraint firstAttribute="bottom" secondItem="IW9-O5-7wf" secondAttribute="bottom" constant="4" id="BBz-Kh-OCx"/>
                                                 <constraint firstItem="IW9-O5-7wf" firstAttribute="leading" secondItem="z1t-2I-RtV" secondAttribute="leading" id="I1A-kA-U9S"/>
                                                 <constraint firstItem="tue-2g-p0e" firstAttribute="centerY" secondItem="ruF-cn-qmT" secondAttribute="centerY" id="L2o-4Y-sF1"/>
                                                 <constraint firstItem="z1t-2I-RtV" firstAttribute="top" secondItem="ruF-cn-qmT" secondAttribute="topMargin" id="RiH-ne-ZvC"/>
                                                 <constraint firstItem="tue-2g-p0e" firstAttribute="leading" relation="lessThanOrEqual" secondItem="z1t-2I-RtV" secondAttribute="trailing" constant="236" id="aOv-u6-vUq"/>
                                                 <constraint firstItem="z1t-2I-RtV" firstAttribute="leading" secondItem="ruF-cn-qmT" secondAttribute="leadingMargin" constant="18" id="hFW-in-QP2"/>
-                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="tue-2g-p0e" secondAttribute="trailing" constant="20" symbolic="YES" id="mtA-Cr-tCQ"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IW9-O5-7wf" secondAttribute="trailing" constant="20" symbolic="YES" id="uDL-Lu-JTl"/>
                                             </constraints>
                                         </tableViewCellContentView>
