@@ -81,6 +81,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         navigationItem.leftBarButtonItem = editButtonItem
     }
     
+    // needed if building with UIViewController, not needed if building with UITableViewController
     override func setEditing(_ editing: Bool, animated: Bool) {
         // Takes care of toggling the button's title.
         super.setEditing(editing, animated: true)
