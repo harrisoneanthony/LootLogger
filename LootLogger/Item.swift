@@ -15,8 +15,10 @@ class Item: Equatable, Codable {
     
     init(name: String, serialNumber: String?, valueInDollars: Int){
         // SILVER CHALLENGE: CHAPTER 10
-        if name.count > 20 { // Adjust the character limit as needed
-                let truncatedName = String(name.prefix(20)) + "..." // Truncate the name and add ellipsis
+        if name.count > 20 {
+            // Adjust the character limit as needed
+            // Truncate the name and add ellipsis
+                let truncatedName = String(name.prefix(20)) + "..."
                 self.name = truncatedName
         } else {
             self.name = name
