@@ -12,6 +12,7 @@ class Item: Equatable, Codable {
     var valueInDollars: Int
     var serialNumber: String?
     let dateCreated: Date
+    let itemKey: String
     
     init(name: String, serialNumber: String?, valueInDollars: Int){
         // SILVER CHALLENGE: CHAPTER 10
@@ -26,6 +27,7 @@ class Item: Equatable, Codable {
         self.valueInDollars = valueInDollars
         self.serialNumber = serialNumber
         self.dateCreated = Date()
+        self.itemKey = UUID().uuidString
     }
     
     convenience init(random: Bool = false) {
