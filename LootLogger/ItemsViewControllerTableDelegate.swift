@@ -53,6 +53,9 @@ extension ItemsViewController {
             // remove the item from the store
             itemStore.removeItem(item)
             
+            // remove the item's image from the image store
+            imageStore.deleteImage(forKey: item.itemKey)
+            
             // also remove that row from the table view with an animation
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
