@@ -19,12 +19,22 @@ class ImageStore {
         // turn image into JPEG data
         if let data = image.jpegData(compressionQuality: 0.5){
             // write it to full URL
-            try? data.write(to: url)            
+            try? data.write(to: url)
         }
     }
     
     func image(forKey key: String) -> UIImage? {
-        return cache.object(forKey: key as NSString)
+        if let existingImage = cache.object(forKey: key as NSString) {
+            return existingImage
+        }
+        
+        let url = imageURL(forKey: key)
+        guard let imageFromDisk = UIImage(contentsOfFile: url.path) else {
+            return nil
+        }
+        
+        cache.setObject(imageFromDisk, forKey: key as NSString)
+        return imageFromDisk
     }
     
     func deleteImage(forKey key: String) {
